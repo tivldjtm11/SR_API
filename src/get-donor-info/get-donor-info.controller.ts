@@ -21,6 +21,7 @@ export class GetDonorInfoController {
             }
             const result = await this.getDonorInfoService.getDonorInfo(id);
             return res.json({data: result});
+            
         }catch(error){
             if(error.message == "key_error"){
                 return res.json({message: 'key_error'})
